@@ -1,50 +1,143 @@
+
+@charset "utf-8";
+@import "post.css";
+
 body {
-    background: #333;
-}
-
-div {
-    width: 100px;
-    height: 100px;
-    margin: 16px;
-    display: inline-block;
-    box-shadow: -4px -4px 4px rgb(255 255 255 / 8%), 4px 4px 4px rgb(0 0 0 / 56%), 0 0 0 rgb(255 255 255 / 8%) inset, 0 0 0 rgb(0 0 0 / 56%) inset;
-    border: 1px solid rgba(0, 0, 0, 0.08);
-    border-radius: 10px;
-    box-sizing: border-box !important;
-
-    padding: 8px;
-}
-
-.kutu1 {
-    width: 274px;
-    height: 307px;
-    margin: 16px;
-    display: inline-block;
-    box-shadow: -4px -4px 4px rgb(255 255 255 / 8%), 4px 4px 4px rgb(0 0 0 / 56%), 0 0 0 rgb(255 255 255 / 8%) inset, 0 0 0 rgb(0 0 0 / 56%) inset;
-    border: 1px solid rgba(0, 0, 0, 0.08);
-    border-radius: 10px;
-    box-sizing: border-box !important;
-
-    padding: 30px;
-}
-
-.kutu2 {
-    width: 100px;
-    height: 100px;
-    margin: 16px;
-    display: inline-block;
-    box-shadow: -4px -4px 4px rgb(255 255 255 / 8%), 4px 4px 4px rgb(0 0 0 / 56%), 0 0 0 rgb(255 255 255 / 8%) inset, 0 0 0 rgb(0 0 0 / 56%) inset;
-    border: 1px solid rgba(0, 0, 0, 0.08);
-    border-radius: 10px;
-    box-sizing: border-box !important;
-
-    background: #a5d5b0;
+	background: #212121;
 }
 
 
-input[type=text],input[type=password] {
-    width: 210px;
-    height: 25px;
-    border: 1px solid #000000;
-    border-radius: 4px;
+.ck {
+	
+    color: #fff;
+    text-align:center;
+    background-image: url("../image/ck_21.jpg");
+	background-color: #212121;
+    height: 85px;
+    width: 285px;
+    position: relative;
+    margin: auto;
+    background-position:center;
+	background-repeat:no-repeat;
+	background-size: contain;
 }
+
+
+
+
+
+
+/*************************************** preloader baslangic   *************************************/
+
+
+    #preloader {
+      background-color: #222;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1001;
+    }
+    #loader {
+      display: block;
+      position: relative;
+      left: 50%;
+      top: 50%;
+      width: 150px;
+      height: 150px;
+      margin: -75px 0 0 -75px;
+      border-radius: 50%;
+      border: 3px solid transparent;
+      border-top-color: #3498db;
+      -webkit-animation: spin 2s linear infinite;
+      animation: spin 2s linear infinite;
+    }
+    #loader:before {
+      content: "";
+      position: absolute;
+      top: 5px;
+      left: 5px;
+      right: 5px;
+      bottom: 5px;
+      border-radius: 50%;
+      border: 3px solid transparent;
+      border-top-color: #fff;
+      -webkit-animation: spin 3s linear infinite;
+      animation: spin 3s linear infinite;
+    }
+    #loader:after {
+      content: "";
+      position: absolute;
+      top: 15px;
+      left: 15px;
+      right: 15px;
+      bottom: 15px;
+      border-radius: 50%;
+      border: 3px solid transparent;
+      border-top-color: #79D787;
+      -webkit-animation: spin 1.5s linear infinite;
+      animation: spin 1.5s linear infinite;
+    }
+    @-webkit-keyframes spin {
+      0%   {
+        -webkit-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        transform: rotate(0deg);
+      }
+      100% {
+        -webkit-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        transform: rotate(360deg);
+      }
+    }
+    @keyframes spin {
+      0%   {
+        -webkit-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        transform: rotate(0deg);
+      }
+      100% {
+        -webkit-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        transform: rotate(360deg);
+      }
+    }
+
+
+
+/*************************************** preloader sonu   *************************************/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width:768px) {
+
+	.ck {		
+		width: 95%;
+	    top: 44%;
+	    position: absolute;		
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
