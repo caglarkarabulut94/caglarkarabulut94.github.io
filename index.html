@@ -5,11 +5,11 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
+
     <link rel="icon" href="favicon.png" type="image/x-icon" />
     <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
 
     <link rel="stylesheet" href="assets/css/main.css?v=2.0">
-    <script type="text/javascript" language="javascript" src="js/ornek.js"></script>
 
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 
@@ -27,11 +27,52 @@
 
 
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+    <style>
+        html,
+        body {
+            height: 100%
+        }
+
+        body {
+            display: flex;
+            align-items: center;
+            background-color: #212121;
+        }
+
+
+
+
+        .imza {
+            color: #fff;
+            text-align: center;
+            background-image: url(https://caglarkarabulut.com/assets/image/ck_21.jpg);
+            background-color: #212121;
+            height: 85px;
+            width: 285px;
+            position: relative;
+            margin: auto;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            z-index: 0;
+        }
+
+        .background {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 1;
+            height: 100%;
+        }
+    </style>
+
+
 </head>
 
 <body>
-
-
 
     <div id="preloader">
         <div id="loader">
@@ -40,19 +81,35 @@
 
 
 
-    <div class="ck">
-
-    </div>
 
 
+    <div class="imza"></div>
+
+    <canvas class="background" width="796" height="1792" style="width: 100%; height: 100%;"></canvas>
 
 
 
+
+
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.1/particles.min.js"></script>
+
+
+    <!-- https://marcbruederlin.github.io/particles.js/ -->
+    <script>
+        var particles = Particles.init({
+            selector: '.background',
+            color: '#3db9fc'
+        });
+    </script>
 
 
 
     <script
-        type="text/javascript">$(document).ready(function () { setTimeout("document.getElementById('preloader').style.visibility = 'hidden'", 900); });</script>
+        type="text/javascript">$(document).ready(function () { setTimeout("document.getElementById('preloader').style.visibility = 'hidden'", 1500); });</script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
 </body>
 
 </html>
