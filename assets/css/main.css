@@ -1,0 +1,50 @@
+body {
+    background: #333;
+}
+
+div {
+    width: 100px;
+    height: 100px;
+    margin: 16px;
+    display: inline-block;
+    box-shadow: -4px -4px 4px rgb(255 255 255 / 8%), 4px 4px 4px rgb(0 0 0 / 56%), 0 0 0 rgb(255 255 255 / 8%) inset, 0 0 0 rgb(0 0 0 / 56%) inset;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 10px;
+    box-sizing: border-box !important;
+
+    padding: 8px;
+}
+
+.kutu1 {
+    width: 274px;
+    height: 307px;
+    margin: 16px;
+    display: inline-block;
+    box-shadow: -4px -4px 4px rgb(255 255 255 / 8%), 4px 4px 4px rgb(0 0 0 / 56%), 0 0 0 rgb(255 255 255 / 8%) inset, 0 0 0 rgb(0 0 0 / 56%) inset;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 10px;
+    box-sizing: border-box !important;
+
+    padding: 30px;
+}
+
+.kutu2 {
+    width: 100px;
+    height: 100px;
+    margin: 16px;
+    display: inline-block;
+    box-shadow: -4px -4px 4px rgb(255 255 255 / 8%), 4px 4px 4px rgb(0 0 0 / 56%), 0 0 0 rgb(255 255 255 / 8%) inset, 0 0 0 rgb(0 0 0 / 56%) inset;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 10px;
+    box-sizing: border-box !important;
+
+    background: #a5d5b0;
+}
+
+
+input[type=text],input[type=password] {
+    width: 210px;
+    height: 25px;
+    border: 1px solid #000000;
+    border-radius: 4px;
+}
