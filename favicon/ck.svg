@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg" xmlns:bx="https://boxy-svg.com">
+  <rect y="-7.44" width="510.714" height="507.143" style="fill: none;" x="-3.572"/>
+  <ellipse style="fill-rule: nonzero; paint-order: fill; fill: none;" cx="235.269" cy="236.295" rx="117.41" ry="115.491"/>
+  <rect x="300" y="126.165" width="54.465" height="243.751" style="fill: rgb(69, 244, 136);"/>
+  <path style="fill: rgb(69, 244, 136);" d="M 317.858 251.223 L 417.616 125.294 L 479.465 125.294 L 324.841 315.472 L 317.858 251.223 Z"/>
+  <path style="fill: rgb(69, 244, 136);" d="M 332.344 255.124 L 429.127 367.009 L 489.487 368.268 L 360.443 211.124 L 332.344 255.124 Z"/>
+  <path style="fill: rgb(69, 244, 136);" transform="matrix(-0.757009, 0.00884, -0.008807, -0.754119, 495.368073, 498.340088)" d="M 263.703 243.614 A 205 205 0 1 1 263.703 442.386 A 135.315 135.315 0 1 0 263.703 243.614 Z" bx:shape="crescent 443 343 205 302 0.617 1@f8522707"/>
+</svg>

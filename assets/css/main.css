@@ -1,0 +1,365 @@
+@charset "utf-8";
+@import "post.css";
+
+:root {
+  --animationSpeed: 0.25s;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  background-color: #212121;
+}
+
+.imza {
+  color: #fff;
+  text-align: center;
+  background-image: url(../image/ck_21.jpg);
+  background-color: #212121;
+  height: 85px;
+  width: 285px;
+  position: relative;
+  margin: auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 0;
+}
+
+.background {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  height: 100%;
+}
+
+/* ********************************************************* */
+
+.hamburger-menu {
+  display: inline-block;
+  padding: 3px;
+  width: 29px;
+  position: absolute;
+  top: 35px;
+  right: 35px;
+  z-index: 999;
+}
+
+.bars-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 20px;
+}
+
+.bars-container,
+.bar {
+  cursor: pointer;
+}
+
+.bar {
+  width: 100%;
+  height: 3px;
+  background-color: #64e798;
+  border-radius: 5px;
+  display: block;
+}
+
+.overlap-container {
+  position: relative;
+  padding: 0 0 0 0;
+  top: -1.3px;
+}
+
+.overlap-container .bar {
+  position: absolute;
+  top: 0;
+}
+
+.bar1,
+.bar4 {
+  transform-origin: center left;
+  position: relative;
+}
+
+#menuu {
+  background-color: #252528;
+  opacity: 0.1;
+  transform: translateX(+100%);
+  transition: transform 0.25s;
+
+  width: 400px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: -1;
+  list-style: none;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 0px 20px 0px #000000;
+}
+
+#menuu ul {
+  list-style: none;
+}
+
+#menuu a {
+  color: whitesmoke;
+  text-decoration: none;
+  display: block;
+  font-size: 27px;
+  font-family: sans-serif;
+  margin: 28px 0;
+  touch-action: none;
+  text-shadow: 1px 1px 5px #000000;
+}
+
+#menuu a:hover {
+  color: rgb(118, 248, 100);
+}
+
+#menuu a:active {
+  background-color: #252528;
+  touch-action: none;
+}
+
+/*************** hamburger menu 2 *****************/
+
+#input-check2:checked ~ #menuu {
+  /* display: block; */
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.bars-container2 {
+  position: relative;
+}
+
+.bars-container2 .bar {
+  position: absolute;
+  transform-origin: center;
+}
+
+.bars-container2 .bar1 {
+  top: 5%;
+  animation: makeCross1Backward var(--animationSpeed) ease 0s 1 forwards,
+    moveDownBackward var(--animationSpeed) ease var(--animationSpeed) 1 forwards;
+}
+
+.bars-container2 .bar2 {
+  top: 50%;
+  transition: opacity 0.4s ease;
+}
+
+.bars-container2 .bar3 {
+  top: 95%;
+  animation: makeCross2Backward var(--animationSpeed) ease 0s 1 forwards,
+    moveUpBackward var(--animationSpeed) ease var(--animationSpeed) 1 forwards;
+}
+
+.input-check2:checked + label .bar1 {
+  animation: moveDown var(--animationSpeed) ease 0s 1 forwards,
+    makeCross1 var(--animationSpeed) ease var(--animationSpeed) 1 forwards;
+}
+
+.input-check2:checked + label .bar2 {
+  opacity: 0;
+}
+
+.input-check2:checked + label .bar3 {
+  animation: moveUp var(--animationSpeed) ease 0s 1 forwards,
+    makeCross2 var(--animationSpeed) ease var(--animationSpeed) 1 forwards;
+}
+
+@keyframes moveDown {
+  from {
+    top: 5%;
+    transform: translateY(0);
+  }
+
+  to {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+@keyframes moveDownBackward {
+  from {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  to {
+    top: 5%;
+    transform: translateY(0);
+  }
+}
+
+@keyframes moveUp {
+  from {
+    top: 95%;
+    transform: translateY(0);
+  }
+
+  to {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+@keyframes moveUpBackward {
+  from {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  to {
+    top: 95%;
+    transform: translateY(0);
+  }
+}
+
+@keyframes makeCross1 {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(40deg);
+  }
+}
+
+@keyframes makeCross1Backward {
+  from {
+    top: 50%;
+    transform: rotate(40deg) translateY(-50%);
+  }
+
+  to {
+    top: 50%;
+    transform: rotate(0deg) translateY(-50%);
+  }
+}
+
+@keyframes makeCross2 {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(-40deg);
+  }
+}
+
+@keyframes makeCross2Backward {
+  from {
+    top: 50%;
+    transform: rotate(-40deg) translateY(-50%);
+  }
+
+  to {
+    top: 50%;
+    transform: rotate(0deg) translateY(-50%);
+  }
+}
+
+/*************************************** preloader baslangic   *************************************/
+
+#preloader {
+  background-color: #222;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1001;
+}
+#loader {
+  display: block;
+  position: relative;
+  left: 50%;
+  top: 50%;
+  width: 150px;
+  height: 150px;
+  margin: -75px 0 0 -75px;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  border-top-color: #3498db;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+#loader:before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  right: 5px;
+  bottom: 5px;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  border-top-color: #fff;
+  -webkit-animation: spin 3s linear infinite;
+  animation: spin 3s linear infinite;
+}
+#loader:after {
+  content: "";
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  right: 15px;
+  bottom: 15px;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  border-top-color: #79d787;
+  -webkit-animation: spin 1.5s linear infinite;
+  animation: spin 1.5s linear infinite;
+}
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+/*************************************** preloader sonu   *************************************/
+
+@media (max-width: 768px) {
+  .ck {
+    width: 95%;
+    top: 44%;
+    position: absolute;
+  }
+
+  #menuu {
+    width: 100vw;
+  }
+}
